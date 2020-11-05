@@ -25,11 +25,9 @@ Route::namespace('Walmart')->group(function () {
     Route::middleware(['token'])->group(function () {
         Route::get('/categories', 'CategoryController@pullCategories');
 
-        Route::get('/fitments', 'FitmentController@pullFitments');
+        Route::post('/fulfillments', 'FulfillmentController@pushFulfillment');
 
         Route::get('/listing/get', 'ListingController@pullListings');
-        Route::post('/listing/push', 'ListingController@pushListings');
-        Route::post('/listing/inventory-push', 'ListingController@inventoryPricePush');
 
         Route::get('/orders/get', 'OrderController@pullOrders');
     });

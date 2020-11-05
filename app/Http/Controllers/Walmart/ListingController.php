@@ -20,14 +20,4 @@ class ListingController extends Controller
     {
         return $this->service->pullListings($request);
     }
-
-    public function pushListings(Request $request)
-    {
-        return $this->service->pushListings($request);
-    }
-
-    public function inventoryPricePush()
-    {
-        return $this->service->inventoryPricePush();
-    }
 }

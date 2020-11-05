@@ -60,7 +60,7 @@ class AuthRepository implements AuthRepositoryInterface
     public function refreshToken($refresh_token){
         $wt = WalmartToken::where('refresh_token', $refresh_token)->first();
         if(!$wt){
-            return response()->json(['message' => 'Invalid client id'], 400);
+            return response()->json(['message' => 'Invalid refresh token'], 400);
         }
 
         $response = Http::asForm()

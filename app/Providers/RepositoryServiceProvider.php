@@ -7,6 +7,8 @@ use App\Repositories\Category\CategoryRepository;
 use App\Repositories\Category\CategoryRepositoryInterface;
 use App\Repositories\Fitment\FitmentRepository;
 use App\Repositories\Fitment\FitmentRepositoryInterface;
+use App\Repositories\Fulfillment\FulfillmentRepository;
+use App\Repositories\Fulfillment\FulfillmentRepositoryInterface;
 use App\Repositories\Listing\ListingRepository;
 use App\Repositories\Listing\ListingRepositoryInterface;
 use App\Repositories\Order\OrderRepository;
@@ -16,9 +18,9 @@ class RepositoryServiceProvider extends ServiceProvider
 {
     protected $repositories = [
         CategoryRepositoryInterface::class => CategoryRepository::class,
-        FitmentRepositoryInterface::class  => FitmentRepository::class,
         ListingRepositoryInterface::class  => ListingRepository::class,
-        OrderRepositoryInterface::class    => OrderRepository::class
+        OrderRepositoryInterface::class    => OrderRepository::class,
+        FulfillmentRepositoryInterface::class => FulfillmentRepository::class
     ];
 
     /**

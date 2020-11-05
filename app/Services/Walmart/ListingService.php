@@ -20,13 +20,4 @@ class ListingService
         return $this->repository->get($request);
     }
 
-    public function pushListings(Request $request)
-    {
-        return $this->repository->push($request);
-    }
-
-    public function inventoryPricePush()
-    {
-        return $this->repository->inventoryPricePush();
-    }
 }
